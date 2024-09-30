@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_basic_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "link",
+        "nav",
+        "cancel"
+      ]
+    }
+  }
+}

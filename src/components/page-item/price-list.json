@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_item_price_lists",
+  "info": {
+    "displayName": "priceList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "complex.service"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "twoColumns",
+        "threeColumns"
+      ]
+    }
+  }
+}

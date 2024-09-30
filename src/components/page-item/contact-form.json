@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_item_contact_forms",
+  "info": {
+    "displayName": "contactForm",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    }
+  }
+}

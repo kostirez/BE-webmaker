@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_item_blocks",
+  "info": {
+    "displayName": "block"
+  },
+  "options": {},
+  "attributes": {
+    "block": {
+      "type": "component",
+      "repeatable": false,
+      "component": "complex.block"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "middle",
+        "right"
+      ]
+    }
+  }
+}

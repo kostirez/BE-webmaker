@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_meta_tags",
+  "info": {
+    "displayName": "tag",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

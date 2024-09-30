@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basic_titles",
+  "info": {
+    "displayName": "Title",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "style": {
+      "type": "component",
+      "repeatable": false,
+      "component": "styles.text-style"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_basic_pictures",
+  "info": {
+    "displayName": "picture",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right",
+        "top",
+        "bottom"
+      ]
+    }
+  }
+}

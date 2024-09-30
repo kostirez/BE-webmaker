@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_basic_prices",
+  "info": {
+    "displayName": "price",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CZK",
+        "EURO",
+        "USD"
+      ],
+      "default": "CZK"
+    }
+  }
+}

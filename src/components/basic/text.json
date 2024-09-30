@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_basic_texts",
+  "info": {
+    "displayName": "text",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "style": {
+      "type": "component",
+      "repeatable": false,
+      "component": "styles.text-style"
+    }
+  }
+}

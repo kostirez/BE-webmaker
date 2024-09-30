@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_styles_text_styles",
+  "info": {
+    "displayName": "textStyle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "thin",
+        "light",
+        "medium",
+        "bold",
+        "extraBold"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "success",
+        "warning",
+        "danger"
+      ]
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  }
+}

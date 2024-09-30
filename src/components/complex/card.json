@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_complex_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.text"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    }
+  }
+}

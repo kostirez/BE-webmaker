@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_meta_data",
+  "info": {
+    "displayName": "data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meta.tag"
+    }
+  }
+}

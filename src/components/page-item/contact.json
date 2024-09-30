@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_item_contacts",
+  "info": {
+    "displayName": "contact",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "showMap": {
+      "type": "boolean"
+    },
+    "showSocial": {
+      "type": "boolean"
+    }
+  }
+}

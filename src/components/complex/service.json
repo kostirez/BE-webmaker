@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_complex_services",
+  "info": {
+    "displayName": "service",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.text"
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.price"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

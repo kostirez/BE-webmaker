@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_item_items",
+  "info": {
+    "displayName": "items",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "complex.item"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "twoColumns",
+        "threeColumns"
+      ]
+    }
+  }
+}

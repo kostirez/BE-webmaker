@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_basic_links",
+  "info": {
+    "displayName": "link",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "insideMySite": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

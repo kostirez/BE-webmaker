@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_item_galeries",
+  "info": {
+    "displayName": "galerie",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "pictures": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    }
+  }
+}

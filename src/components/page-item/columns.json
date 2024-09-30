@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_item_columns",
+  "info": {
+    "displayName": "columns",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    },
+    "blocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "complex.block"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    }
+  }
+}
