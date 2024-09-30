@@ -596,6 +596,47 @@ export interface ApiMenuMenu extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+    showInMenu: Schema.Attribute.Boolean;
+    menuOrder: Schema.Attribute.Integer;
+    metaData: Schema.Attribute.Component<'meta.data', false>;
+    items: Schema.Attribute.DynamicZone<
+      [
+        'page-item.price-list',
+        'page-item.items',
+        'page-item.galerie',
+        'page-item.contact',
+        'page-item.contact-form',
+        'page-item.columns',
+        'page-item.cards',
+        'page-item.block',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+  };
+}
+
 export interface ApiWebInfoWebInfo extends Struct.SingleTypeSchema {
   collectionName: 'web_infos';
   info: {
@@ -1003,6 +1044,7 @@ declare module '@strapi/strapi' {
       'api::contact.contact': ApiContactContact;
       'api::layout.layout': ApiLayoutLayout;
       'api::menu.menu': ApiMenuMenu;
+      'api::page.page': ApiPagePage;
       'api::web-info.web-info': ApiWebInfoWebInfo;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;

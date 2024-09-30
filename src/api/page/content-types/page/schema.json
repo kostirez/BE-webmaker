@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "showInMenu": {
+      "type": "boolean"
+    },
+    "menuOrder": {
+      "type": "integer"
+    },
+    "metaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.data"
+    },
+    "items": {
+      "type": "dynamiczone",
+      "components": [
+        "page-item.price-list",
+        "page-item.items",
+        "page-item.galerie",
+        "page-item.contact",
+        "page-item.contact-form",
+        "page-item.columns",
+        "page-item.cards",
+        "page-item.block"
+      ]
+    }
+  }
+}
