@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_core_social_nets",
+  "info": {
+    "displayName": "socialNets",
+    "icon": "thumbUp"
+  },
+  "options": {},
+  "attributes": {
+    "facebookUrl": {
+      "type": "string"
+    },
+    "instagramUrl": {
+      "type": "string"
+    },
+    "linkedInUrl": {
+      "type": "string"
+    },
+    "pinterestUrl": {
+      "type": "string"
+    }
+  }
+}

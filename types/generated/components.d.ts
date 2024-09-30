@@ -140,6 +140,34 @@ export interface MetaData extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreSocialNets extends Struct.ComponentSchema {
+  collectionName: 'components_core_social_nets';
+  info: {
+    displayName: 'socialNets';
+    icon: 'thumbUp';
+  };
+  attributes: {
+    facebookUrl: Schema.Attribute.String;
+    instagramUrl: Schema.Attribute.String;
+    linkedInUrl: Schema.Attribute.String;
+    pinterestUrl: Schema.Attribute.String;
+  };
+}
+
+export interface CoreAddress extends Struct.ComponentSchema {
+  collectionName: 'components_core_addresses';
+  info: {
+    displayName: 'address';
+    icon: 'house';
+  };
+  attributes: {
+    street: Schema.Attribute.String;
+    city: Schema.Attribute.String;
+    state: Schema.Attribute.String;
+    zip: Schema.Attribute.String;
+  };
+}
+
 export interface ComplexService extends Struct.ComponentSchema {
   collectionName: 'components_complex_services';
   info: {
@@ -294,6 +322,8 @@ declare module '@strapi/strapi' {
       'page-item.block': PageItemBlock;
       'meta.tag': MetaTag;
       'meta.data': MetaData;
+      'core.social-nets': CoreSocialNets;
+      'core.address': CoreAddress;
       'complex.service': ComplexService;
       'complex.item': ComplexItem;
       'complex.card': ComplexCard;

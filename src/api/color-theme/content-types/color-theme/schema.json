@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "color_themes",
+  "info": {
+    "singularName": "color-theme",
+    "pluralName": "color-themes",
+    "displayName": "colorTheme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "primary": {
+      "type": "string"
+    },
+    "secondary": {
+      "type": "string"
+    },
+    "backgroundLight": {
+      "type": "string"
+    },
+    "backgroundDark": {
+      "type": "string"
+    },
+    "success": {
+      "type": "string",
+      "default": "#7aff24"
+    },
+    "warning": {
+      "type": "string",
+      "default": "#ffd232"
+    },
+    "danger": {
+      "type": "string",
+      "default": "#d70000"
+    }
+  }
+}

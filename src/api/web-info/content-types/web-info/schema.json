@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "web_infos",
+  "info": {
+    "singularName": "web-info",
+    "pluralName": "web-infos",
+    "displayName": "webInfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
