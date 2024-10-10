@@ -548,6 +548,60 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiEmailEmail extends Struct.SingleTypeSchema {
+  collectionName: 'emails';
+  info: {
+    singularName: 'email';
+    pluralName: 'emails';
+    displayName: 'email';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    templates: Schema.Attribute.Component<'core.email-template', true>;
+    footer: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::email.email'>;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logo: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    menu: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    contact: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    links: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    socialNets: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+  };
+}
+
 export interface ApiLayoutLayout extends Struct.SingleTypeSchema {
   collectionName: 'layouts';
   info: {
@@ -578,12 +632,14 @@ export interface ApiMenuMenu extends Struct.SingleTypeSchema {
     singularName: 'menu';
     pluralName: 'menus';
     displayName: 'menu';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     type: Schema.Attribute.Enumeration<['top', 'left', 'topCompact']>;
+    mainPage: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -593,6 +649,35 @@ export interface ApiMenuMenu extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::menu.menu'>;
+  };
+}
+
+export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
+  collectionName: 'messages';
+  info: {
+    singularName: 'message';
+    pluralName: 'messages';
+    displayName: 'message';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    mail: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::message.message'
+    >;
   };
 }
 
@@ -615,14 +700,16 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     metaData: Schema.Attribute.Component<'meta.data', false>;
     items: Schema.Attribute.DynamicZone<
       [
-        'page-item.price-list',
-        'page-item.items',
-        'page-item.galerie',
         'page-item.contact',
         'page-item.contact-form',
         'page-item.columns',
-        'page-item.cards',
         'page-item.block',
+        'page-item.cards',
+        'page-item.gallery',
+        'page-item.log-in',
+        'page-item.registration',
+        'page-item.price-list',
+        'page-item.items',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -1042,8 +1129,11 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::color-theme.color-theme': ApiColorThemeColorTheme;
       'api::contact.contact': ApiContactContact;
+      'api::email.email': ApiEmailEmail;
+      'api::footer.footer': ApiFooterFooter;
       'api::layout.layout': ApiLayoutLayout;
       'api::menu.menu': ApiMenuMenu;
+      'api::message.message': ApiMessageMessage;
       'api::page.page': ApiPagePage;
       'api::web-info.web-info': ApiWebInfoWebInfo;
       'admin::permission': AdminPermission;

@@ -2,15 +2,23 @@
   "collectionName": "components_page_item_contacts",
   "info": {
     "displayName": "contact",
-    "icon": "discuss"
+    "icon": "discuss",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "showMap": {
-      "type": "boolean"
-    },
     "showSocial": {
       "type": "boolean"
+    },
+    "mapData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.map-data"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
     }
   }
 }

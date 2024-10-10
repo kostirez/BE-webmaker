@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_core_email_templates",
+  "info": {
+    "displayName": "emailTemplate",
+    "icon": "paperPlane"
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "string"
+    },
+    "html": {
+      "type": "richtext"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}

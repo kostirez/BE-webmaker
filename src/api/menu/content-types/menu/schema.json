@@ -4,7 +4,8 @@
   "info": {
     "singularName": "menu",
     "pluralName": "menus",
-    "displayName": "menu"
+    "displayName": "menu",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,11 @@
         "left",
         "topCompact"
       ]
+    },
+    "mainPage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
     }
   }
 }

@@ -12,7 +12,7 @@
       "repeatable": false,
       "component": "basic.title"
     },
-    "text": {
+    "texts": {
       "type": "component",
       "repeatable": true,
       "component": "basic.text"

@@ -32,14 +32,16 @@
     "items": {
       "type": "dynamiczone",
       "components": [
-        "page-item.price-list",
-        "page-item.items",
-        "page-item.galerie",
         "page-item.contact",
         "page-item.contact-form",
         "page-item.columns",
+        "page-item.block",
         "page-item.cards",
-        "page-item.block"
+        "page-item.gallery",
+        "page-item.log-in",
+        "page-item.registration",
+        "page-item.price-list",
+        "page-item.items"
       ]
     }
   }

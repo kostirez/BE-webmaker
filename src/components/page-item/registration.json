@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_item_registrations",
+  "info": {
+    "displayName": "registration",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "redirectTo": {
+      "type": "string"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}

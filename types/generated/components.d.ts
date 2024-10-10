@@ -17,106 +17,6 @@ export interface StylesTextStyle extends Struct.ComponentSchema {
   };
 }
 
-export interface PageItemPriceList extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_price_lists';
-  info: {
-    displayName: 'priceList';
-    icon: 'bulletList';
-  };
-  attributes: {
-    services: Schema.Attribute.Component<'complex.service', true>;
-    style: Schema.Attribute.Enumeration<['twoColumns', 'threeColumns']>;
-  };
-}
-
-export interface PageItemItems extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_items';
-  info: {
-    displayName: 'items';
-    icon: 'bulletList';
-  };
-  attributes: {
-    items: Schema.Attribute.Component<'complex.item', true>;
-    style: Schema.Attribute.Enumeration<['twoColumns', 'threeColumns']>;
-  };
-}
-
-export interface PageItemGalerie extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_galeries';
-  info: {
-    displayName: 'galerie';
-    icon: 'picture';
-  };
-  attributes: {
-    pictures: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    title: Schema.Attribute.Component<'basic.title', false>;
-  };
-}
-
-export interface PageItemContact extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_contacts';
-  info: {
-    displayName: 'contact';
-    icon: 'discuss';
-  };
-  attributes: {
-    showMap: Schema.Attribute.Boolean;
-    showSocial: Schema.Attribute.Boolean;
-  };
-}
-
-export interface PageItemContactForm extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_contact_forms';
-  info: {
-    displayName: 'contactForm';
-    icon: 'user';
-    description: '';
-  };
-  attributes: {
-    title: Schema.Attribute.Component<'basic.title', false>;
-  };
-}
-
-export interface PageItemColumns extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_columns';
-  info: {
-    displayName: 'columns';
-    icon: 'apps';
-    description: '';
-  };
-  attributes: {
-    style: Schema.Attribute.Enumeration<['primary', 'secondary']>;
-    blocks: Schema.Attribute.Component<'complex.block', true>;
-    title: Schema.Attribute.Component<'basic.title', false>;
-  };
-}
-
-export interface PageItemCards extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_cards';
-  info: {
-    displayName: 'cards';
-    icon: 'apps';
-  };
-  attributes: {
-    cards: Schema.Attribute.Component<'complex.card', true>;
-    style: Schema.Attribute.Enumeration<['small', 'big', 'info']>;
-  };
-}
-
-export interface PageItemBlock extends Struct.ComponentSchema {
-  collectionName: 'components_page_item_blocks';
-  info: {
-    displayName: 'block';
-  };
-  attributes: {
-    block: Schema.Attribute.Component<'complex.block', false>;
-    style: Schema.Attribute.Enumeration<['left', 'middle', 'right']>;
-  };
-}
-
 export interface MetaTag extends Struct.ComponentSchema {
   collectionName: 'components_meta_tags';
   info: {
@@ -140,6 +40,141 @@ export interface MetaData extends Struct.ComponentSchema {
   };
 }
 
+export interface PageItemRegistration extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_registrations';
+  info: {
+    displayName: 'registration';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    redirectTo: Schema.Attribute.String;
+    title: Schema.Attribute.Component<'basic.title', false>;
+    buttonText: Schema.Attribute.String;
+  };
+}
+
+export interface PageItemPriceList extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_price_lists';
+  info: {
+    displayName: 'priceList';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    services: Schema.Attribute.Component<'complex.service', true>;
+    design: Schema.Attribute.Enumeration<['twoColumns', 'threeColumns']>;
+    title: Schema.Attribute.Component<'basic.title', false>;
+  };
+}
+
+export interface PageItemLogIn extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_log_ins';
+  info: {
+    displayName: 'logIn';
+    icon: 'key';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.Component<'basic.title', false>;
+    redirectTo: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'P\u0159ihl\u00E1sit'>;
+  };
+}
+
+export interface PageItemItems extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_items';
+  info: {
+    displayName: 'items';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'complex.item', true>;
+    mode: Schema.Attribute.Enumeration<['twoColumns', 'threeColumns']>;
+    title: Schema.Attribute.Component<'basic.title', false>;
+  };
+}
+
+export interface PageItemGallery extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_galleries';
+  info: {
+    displayName: 'gallery';
+    icon: 'landscape';
+  };
+  attributes: {
+    title: Schema.Attribute.Component<'basic.title', false>;
+    pictures: Schema.Attribute.Component<'basic.picture', true>;
+    columns: Schema.Attribute.Integer;
+  };
+}
+
+export interface PageItemContact extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_contacts';
+  info: {
+    displayName: 'contact';
+    icon: 'discuss';
+    description: '';
+  };
+  attributes: {
+    showSocial: Schema.Attribute.Boolean;
+    mapData: Schema.Attribute.Component<'core.map-data', false>;
+    title: Schema.Attribute.Component<'basic.title', false>;
+  };
+}
+
+export interface PageItemContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_contact_forms';
+  info: {
+    displayName: 'contactForm';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.Component<'basic.title', false>;
+  };
+}
+
+export interface PageItemColumns extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_columns';
+  info: {
+    displayName: 'columns';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    blocks: Schema.Attribute.Component<'complex.block', true>;
+    title: Schema.Attribute.Component<'basic.title', false>;
+    count: Schema.Attribute.Integer;
+  };
+}
+
+export interface PageItemCards extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_cards';
+  info: {
+    displayName: 'cardList';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'complex.card', true>;
+    layout: Schema.Attribute.Enumeration<['small', 'big', 'info']>;
+    title: Schema.Attribute.Component<'basic.title', false>;
+  };
+}
+
+export interface PageItemBlock extends Struct.ComponentSchema {
+  collectionName: 'components_page_item_blocks';
+  info: {
+    displayName: 'block';
+  };
+  attributes: {
+    block: Schema.Attribute.Component<'complex.block', false>;
+    style: Schema.Attribute.Enumeration<['left', 'middle', 'right']>;
+  };
+}
+
 export interface CoreSocialNets extends Struct.ComponentSchema {
   collectionName: 'components_core_social_nets';
   info: {
@@ -151,6 +186,33 @@ export interface CoreSocialNets extends Struct.ComponentSchema {
     instagramUrl: Schema.Attribute.String;
     linkedInUrl: Schema.Attribute.String;
     pinterestUrl: Schema.Attribute.String;
+  };
+}
+
+export interface CoreMapData extends Struct.ComponentSchema {
+  collectionName: 'components_core_map_data';
+  info: {
+    displayName: 'mapData';
+    icon: 'globe';
+  };
+  attributes: {
+    lat: Schema.Attribute.Decimal;
+    lon: Schema.Attribute.Decimal;
+    popupText: Schema.Attribute.String;
+  };
+}
+
+export interface CoreEmailTemplate extends Struct.ComponentSchema {
+  collectionName: 'components_core_email_templates';
+  info: {
+    displayName: 'emailTemplate';
+    icon: 'paperPlane';
+  };
+  attributes: {
+    from: Schema.Attribute.String;
+    html: Schema.Attribute.RichText;
+    subject: Schema.Attribute.String;
+    code: Schema.Attribute.String;
   };
 }
 
@@ -220,7 +282,7 @@ export interface ComplexBlock extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.Component<'basic.title', false>;
-    text: Schema.Attribute.Component<'basic.text', true>;
+    texts: Schema.Attribute.Component<'basic.text', true>;
     picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     button: Schema.Attribute.Component<'basic.button', false>;
   };
@@ -273,9 +335,9 @@ export interface BasicPicture extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    url: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     placement: Schema.Attribute.Enumeration<['left', 'right', 'top', 'bottom']>;
+    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -312,17 +374,21 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'styles.text-style': StylesTextStyle;
+      'meta.tag': MetaTag;
+      'meta.data': MetaData;
+      'page-item.registration': PageItemRegistration;
       'page-item.price-list': PageItemPriceList;
+      'page-item.log-in': PageItemLogIn;
       'page-item.items': PageItemItems;
-      'page-item.galerie': PageItemGalerie;
+      'page-item.gallery': PageItemGallery;
       'page-item.contact': PageItemContact;
       'page-item.contact-form': PageItemContactForm;
       'page-item.columns': PageItemColumns;
       'page-item.cards': PageItemCards;
       'page-item.block': PageItemBlock;
-      'meta.tag': MetaTag;
-      'meta.data': MetaData;
       'core.social-nets': CoreSocialNets;
+      'core.map-data': CoreMapData;
+      'core.email-template': CoreEmailTemplate;
       'core.address': CoreAddress;
       'complex.service': ComplexService;
       'complex.item': ComplexItem;

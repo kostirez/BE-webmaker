@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "boolean",
+      "default": true
+    },
+    "menu": {
+      "type": "boolean",
+      "default": true
+    },
+    "contact": {
+      "type": "boolean",
+      "default": true
+    },
+    "links": {
+      "type": "boolean",
+      "default": false
+    },
+    "socialNets": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

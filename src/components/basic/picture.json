@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "url": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
     },
@@ -21,6 +18,16 @@
         "top",
         "bottom"
       ]
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

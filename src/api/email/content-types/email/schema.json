@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "emails",
+  "info": {
+    "singularName": "email",
+    "pluralName": "emails",
+    "displayName": "email",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "templates": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.email-template"
+    },
+    "footer": {
+      "type": "richtext"
+    }
+  }
+}

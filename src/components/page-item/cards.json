@@ -1,8 +1,9 @@
 {
   "collectionName": "components_page_item_cards",
   "info": {
-    "displayName": "cards",
-    "icon": "apps"
+    "displayName": "cardList",
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,13 +12,18 @@
       "repeatable": true,
       "component": "complex.card"
     },
-    "style": {
+    "layout": {
       "type": "enumeration",
       "enum": [
         "small",
         "big",
         "info"
       ]
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
     }
   }
 }

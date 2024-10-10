@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_page_item_log_ins",
+  "info": {
+    "displayName": "logIn",
+    "icon": "key",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    },
+    "redirectTo": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Přihlásit"
+    }
+  }
+}

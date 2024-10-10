@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_page_item_galleries",
+  "info": {
+    "displayName": "gallery",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.title"
+    },
+    "pictures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.picture"
+    },
+    "columns": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_core_map_data",
+  "info": {
+    "displayName": "mapData",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "decimal"
+    },
+    "lon": {
+      "type": "decimal"
+    },
+    "popupText": {
+      "type": "string"
+    }
+  }
+}

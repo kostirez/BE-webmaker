@@ -7,13 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "style": {
-      "type": "enumeration",
-      "enum": [
-        "primary",
-        "secondary"
-      ]
-    },
     "blocks": {
       "type": "component",
       "repeatable": true,
@@ -23,6 +16,9 @@
       "type": "component",
       "repeatable": false,
       "component": "basic.title"
+    },
+    "count": {
+      "type": "integer"
     }
   }
 }
