@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "user_pages",
+  "info": {
+    "singularName": "user-page",
+    "pluralName": "user-pages",
+    "displayName": "userPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "loginSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-item.log-in"
+    },
+    "registrationSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page-item.registration"
+    }
+  }
+}

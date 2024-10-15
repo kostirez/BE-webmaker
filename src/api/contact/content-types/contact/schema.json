@@ -24,6 +24,12 @@
       "type": "component",
       "repeatable": false,
       "component": "core.social-nets"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "biginteger"
     }
   }
 }

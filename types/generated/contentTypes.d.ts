@@ -441,7 +441,6 @@ export interface PluginUsersPermissionsUser
     displayName: 'User';
   };
   options: {
-    timestamps: true;
     draftAndPublish: false;
   };
   attributes: {
@@ -470,6 +469,7 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    name: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -533,6 +533,8 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     name: Schema.Attribute.String;
     address: Schema.Attribute.Component<'core.address', false>;
     socialNets: Schema.Attribute.Component<'core.social-nets', false>;
+    mail: Schema.Attribute.String;
+    tel: Schema.Attribute.BigInteger;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -721,6 +723,38 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
+  };
+}
+
+export interface ApiUserPageUserPage extends Struct.SingleTypeSchema {
+  collectionName: 'user_pages';
+  info: {
+    singularName: 'user-page';
+    pluralName: 'user-pages';
+    displayName: 'userPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    loginSettings: Schema.Attribute.Component<'page-item.log-in', false>;
+    registrationSettings: Schema.Attribute.Component<
+      'page-item.registration',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::user-page.user-page'
+    >;
   };
 }
 
@@ -1135,6 +1169,7 @@ declare module '@strapi/strapi' {
       'api::menu.menu': ApiMenuMenu;
       'api::message.message': ApiMessageMessage;
       'api::page.page': ApiPagePage;
+      'api::user-page.user-page': ApiUserPageUserPage;
       'api::web-info.web-info': ApiWebInfoWebInfo;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
